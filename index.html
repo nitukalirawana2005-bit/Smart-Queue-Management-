@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Queue Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Smart Queue Management System</h1>
+      <p>Manage customer tokens and waiting time easily.</p>
+
+      <div class="box">
+        <h2>Add Customer</h2>
+        <input
+          type="text"
+          id="customerName"
+          placeholder="Enter customer name"
+        />
+        <button onclick="addCustomer()">Generate Token</button>
+      </div>
+
+      <div class="box">
+        <h2>Waiting Queue</h2>
+        <p class="serving">Now Serving: <span id="nowServing">None</span></p>
+        <ul id="queueList"></ul>
+        <p id="message" class="message"></p>
+        <button onclick="serveCustomer()">Serve Next Customer</button>
+        <button class="secondary" onclick="resetQueue()">Reset Queue</button>
+      </div>
+
+      <div class="box">
+        <h2>Queue Statistics</h2>
+        <p>Total Waiting Customers: <span id="total">0</span></p>
+        <p>Next Token Number: <span id="nextToken">101</span></p>
+        <p>
+          Estimated Waiting Time for the Last Token:
+          <span id="waitingTime">0</span> minutes
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
