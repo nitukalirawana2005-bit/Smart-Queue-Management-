@@ -1,0 +1,11 @@
+{
+  "name": "smart-queue-management-system",
+  "version": "1.0.0",
+  "description": "Smart Queue Management System with an Oracle PL/SQL database layer",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "oracledb": "^6.5.1"
+  }
+}
